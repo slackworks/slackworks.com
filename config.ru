@@ -1,5 +1,11 @@
 require 'rack'
 require 'rack/contrib/try_static'
+require 'rack/rewrite'
+
+use Rack::Rewrite do
+  r301 %r{^/~cog(\/.*)?$}, 'http://levitylab.com/cog'
+  r301 %r{^/~yotam(\/.*)?$}, 'http://yotamgingold.com'
+end
 
 use Rack::TryStatic,
   :root => "public",
