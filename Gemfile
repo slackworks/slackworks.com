@@ -1,6 +1,4 @@
-source "https://rubygems.org"
-ruby "1.9.3", :engine => 'jruby', :engine_version => '1.7.2'
+ruby '2.7.1'
 
-gem 'rack-contrib'
-gem 'rack-rewrite'
-gem 'puma'
+gem 'github-pages', '209'
+gem 'jekyll-docs'
